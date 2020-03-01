@@ -8,5 +8,31 @@ html, body {
 
 body {
     display: grid;
-    grid: 20% 70% 10% / 100%;
+    grid: 45% 60% 5% / 100%;
 }
+
+main {
+    display: grid;
+    grid: 100% / 70% 30%;
+}
+
+header {
+    background: url("/images/bg.jpg")
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+}
+
+.t1 {
+    max-height: 20%;
+    max-width: 1005px;
+}
+
+.t2 {
+    max-width: 1005px;
+}
+
