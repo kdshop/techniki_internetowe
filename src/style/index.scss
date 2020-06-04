@@ -1,0 +1,30 @@
+@import "variable";
+
+h2 {
+  font-size: 44px;
+  font-weight: 400;
+  color: $blue;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid $white;
+  text-align: justify;
+  footer {
+    font-weight: 100;
+    font-style: italic;
+  }
+}
+
+.left {
+  text-align: left;
+}
+
+.justify {
+  text-align: justify;
+  padding-bottom: 30px;
+}

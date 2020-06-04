@@ -1,0 +1,18 @@
+$white: #EFEFEF;
+$black: #000000;
+$red: #D9534F;
+$orange: #F0AD4E;
+$yellow: #FFD500;
+$green: #5CB85C;
+$blue: #0275D8;
+$teal: #5BC0DE;
+
+$body-color: $white;
+$body-background: #2F3336;
+$header-color: $blue;
+
+$link-color: $blue;
+$link-hover: darken($link-color, 15%);
+
+$font-size: 17px;
+$header-font-size: $font-size * 2.5;

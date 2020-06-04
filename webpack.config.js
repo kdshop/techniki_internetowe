@@ -3,12 +3,26 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/index.ts',
+    mainStyle: './src/style/main.scss',
+    indexStyle: './src/style/index.scss',
+    gallery: './src/script/gallery.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    })
+      filename: "index.html",
+      template: 'src/index.html',
+      chunks: ['mainStyle', 'indexStyle']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: 'src/contact.html',
+      chunks: ['mainStyle']
+    }),
+    new HtmlWebpackPlugin({
+      filename: "gallery.html",
+      template: 'src/gallery.html',
+      chunks: ['mainStyle']
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
@@ -23,16 +37,11 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ],
-      },
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/,
-      },
+      }
     ],
   },
   resolve: {
-    extensions: [ '.ts', '.js' ]
+    extensions: [ '.js' ]
   },
   mode: "development",
   devtool: "inline-source-map",

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sporty ekstremalne</title>
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1" />
+  </head>
+  <body>
+    <header>
+      <h1>Sporty ekstremalne</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="gallery.html">Galeria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <h1>Kontakt ze mną</h1>
+      <p>
+        Dzielisz moje pasje? Sporty ekstremalne nie stanowią dla Ciebie
+        wyzwania? Możemy o tym porozmawiać! Wystrczy, że
+        <strong>napiszesz do mnie wiadomość</strong> :)
+      </p>
+    </div>
+    <div class="inverse">
+      <div class="wrapper left">
+        <h1>Formularz kontaktowy</h1>
+        <form onsubmit="return false">
+          <label for="name">Imię</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Podaj swoje imię..."
+          />
+          <div class="validation" id="validation-name"></div>
+          <label for="email">E-mail</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Podaj swój e-mail..."
+          />
+          <div class="validation" id="validation-email"></div>
+          <label for="country">Gdzie obecnie mieszkasz</label>
+          <select id="country" name="country">
+            <option value="poland">Polska</option>
+            <option value="deutchland">Niemcy</option>
+            <option value="uk">Zjednoczone Królestwo</option>
+            <option value="other">Inne (podaj w wiadomości)</option>
+          </select>
+          <label for="message">Wiadomość</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Napisz coś do mnie..."
+            style="height: 200px;"
+          ></textarea>
+          <div class="validation" id="validation-message"></div>
+          <input type="submit" id="submit" value="Wyślij" />
+        </form>
+        <small
+          >Formularz jest wyłącznie elementem pokazowym, nie wysyła żadnych
+          wiadomości.</small
+        >
+      </div>
+    </div>
+    <div class="wrapper">
+      <img src="images/contact/full.jpg" alt="Ekstremalny taniec na linie" />
+    </div>
+    <footer class="center">&copy; 2020</footer>
+    <script src="scripts/validate.js"></script>
+  </body>
+</html>
