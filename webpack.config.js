@@ -3,25 +3,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    mainStyle: './src/style/main.scss',
-    indexStyle: './src/style/index.scss',
-    gallery: './src/script/gallery.js',
+    mainCSS: './src/style/main.scss',
+    indexCSS: './src/style/index.scss',
+    contactCSS: './src/style/contact.scss',
+    galleryCSS: './src/style/gallery.scss',
+    galleryJS: './src/script/gallery.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: 'src/index.html',
-      chunks: ['mainStyle', 'indexStyle']
+      chunks: ['mainCSS', 'indexCSS']
     }),
     new HtmlWebpackPlugin({
       filename: "contact.html",
       template: 'src/contact.html',
-      chunks: ['mainStyle']
+      chunks: ['mainCSS', 'contactCSS']
     }),
     new HtmlWebpackPlugin({
       filename: "gallery.html",
       template: 'src/gallery.html',
-      chunks: ['mainStyle']
+      chunks: ['mainCSS', 'galleryCSS', 'galleryJS']
     }),
   ],
   output: {

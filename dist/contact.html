@@ -16,61 +16,103 @@
         </ul>
       </nav>
     </header>
-    <div class="wrapper">
-      <h1>Kontakt ze mną</h1>
-      <p>
-        Dzielisz moje pasje? Sporty ekstremalne nie stanowią dla Ciebie
-        wyzwania? Możemy o tym porozmawiać! Wystrczy, że
-        <strong>napiszesz do mnie wiadomość</strong> :)
-      </p>
-    </div>
-    <div class="inverse">
-      <div class="wrapper left">
-        <h1>Formularz kontaktowy</h1>
-        <form onsubmit="return false">
-          <label for="name">Imię</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Podaj swoje imię..."
-          />
-          <div class="validation" id="validation-name"></div>
-          <label for="email">E-mail</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Podaj swój e-mail..."
-          />
-          <div class="validation" id="validation-email"></div>
-          <label for="country">Gdzie obecnie mieszkasz</label>
-          <select id="country" name="country">
-            <option value="poland">Polska</option>
-            <option value="deutchland">Niemcy</option>
-            <option value="uk">Zjednoczone Królestwo</option>
-            <option value="other">Inne (podaj w wiadomości)</option>
-          </select>
-          <label for="message">Wiadomość</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Napisz coś do mnie..."
-            style="height: 200px;"
-          ></textarea>
-          <div class="validation" id="validation-message"></div>
-          <input type="submit" id="submit" value="Wyślij" />
-        </form>
-        <small
-          >Formularz jest wyłącznie elementem pokazowym, nie wysyła żadnych
-          wiadomości.</small
-        >
-      </div>
-    </div>
-    <div class="wrapper">
-      <img src="images/contact/full.jpg" alt="Ekstremalny taniec na linie" />
-    </div>
+    <main>
+      <section class="inverse">
+        <div class="wrapper left">
+          <h2>Formularz kontaktowy</h2>
+          <form>
+            <label>
+              <span>Nazwisko:</span>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Kowalski"
+                pattern="[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+"
+                required
+              />
+              <span class="tooltip">Wpisz swoje nazwisko!</span>
+            </label>
+            <label>
+              <span>Imię:</span>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Adam"
+                pattern="[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+"
+                required
+              />
+              <span class="tooltip">Wpisz swoje imię!</span>
+            </label>
+            <label>
+              <span>E-mail:</span>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="adam@kowalski.pl"
+                required
+              />
+              <span class="tooltip">Adres e-mail!</span>
+            </label>
+            <label>
+              <span>Ulica, nr domu, nr mieszkania:</span>
+              <input
+                type="text"
+                id="street"
+                name="street"
+                placeholder="Kowalska"
+                pattern="[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+"
+                required
+              />
+              <input
+                type="text"
+                id="house"
+                name="house"
+                placeholder="13"
+                pattern="[0-9]+"
+                required
+              />
+              <input
+                type="text"
+                id="flat"
+                name="flat"
+                placeholder="1"
+                pattern="[0-9]+"
+                required
+              />
+              <span class="tooltip">Adres zamieszkania</span>
+            </label>
+            <label>
+              <span>Kod pocztowy:</span>
+              <input
+                type="text"
+                id="postal"
+                name="postal"
+                placeholder="80-999"
+                pattern="\d{2}-\d{3}"
+                required
+              />
+              <span class="tooltip">Kod pocztowy w formacie XX-XXX</span>
+            </label>
+            <label>
+              <span>Miasto:</span>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Warszawa"
+                pattern="[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+"
+                required
+              />
+              <span class="tooltip">Wpisz swoje miasto!</span>
+            </label>
+            <input type="submit" id="submit" value="Wyślij" />
+          </form>
+        </div>
+      </section>
+    </main>
     <footer class="center">&copy; 2020</footer>
-    <script src="scripts/validate.js"></script>
-  <script src="mainStyle.bundle.js"></script></body>
+  <script src="mainCSS.bundle.js"></script><script src="contactCSS.bundle.js"></script></body>
 </html>
